@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synergy Research Hub | O Ecossistema de Pesquisa e Inovação</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Configuração do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        brand: ['Quicksand', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            rose: '#c45a6c',
+                            teal: '#3b4b61',
+                            purple: '#8a65e7',
+                            light: '#eef2ff'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
+
+    <!-- NAVEGAÇÃO -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- Logo Oficial Synergy -->
+                <div class="flex items-center gap-3">
+                    <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(50, 50)">
+                            <circle cx="-14" cy="0" r="21" fill="#3b4b61" opacity="0.85" style="mix-blend-mode: multiply;"/>
+                            <circle cx="0" cy="-14" r="21" fill="#b94a62" opacity="0.85" style="mix-blend-mode: multiply;"/>
+                            <circle cx="14" cy="0" r="21" fill="#dbeafe" opacity="0.9"/>
+                            <circle cx="0" cy="14" r="21" fill="#8858e3" opacity="0.85" style="mix-blend-mode: multiply;"/>
+                            <rect x="-9" y="-9" width="18" height="18" fill="#f8fafc" transform="rotate(45)" />
+                        </g>
+                    </svg>
+                    <span class="font-brand font-bold text-xl tracking-tight text-slate-900">Synergy<span class="text-slate-500 font-medium text-sm ml-1 hidden sm:inline-block">Research Hub</span></span>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#como-funciona" class="text-slate-600 hover:text-brand-purple font-medium transition-colors">Como Funciona</a>
+                    <a href="#para-quem" class="text-slate-600 hover:text-brand-purple font-medium transition-colors">Para Quem</a>
+                    <a href="https://tally.so/r/ZjO75e" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-slate-900/20 flex items-center gap-2">
+                        Acessar o Hub
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Botão Menu Mobile -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 p-4 flex flex-col gap-4 shadow-lg">
+            <a href="#como-funciona" class="mobile-link text-slate-600 font-medium p-2">Como Funciona</a>
+            <a href="#para-quem" class="mobile-link text-slate-600 font-medium p-2">Para Quem</a>
+            <a href="https://tally.so/r/ZjO75e" target="_blank" class="bg-brand-purple text-white px-4 py-3 rounded-xl font-medium text-center flex items-center justify-center gap-2">
+                Começar Agora
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        <!-- Efeitos de fundo (Cores da Logo) -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-purple rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brand-rose rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                
+                <!-- Textos Hero -->
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-50 border border-purple-100 text-purple-700 font-medium text-sm mb-6">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        O Ecossistema Multidisciplinar
+                    </div>
+                    <h1 class="font-brand text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6">
+                        O que está travando a sua pesquisa <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-rose">hoje?</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
+                        Todo pesquisador esbarra em barreiras fora da sua especialidade. O Synergy conecta o seu projeto aos especialistas exatos que faltam na sua equipe para você publicar mais e melhor.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://tally.so/r/ZjO75e" target="_blank" class="bg-brand-purple hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg shadow-purple-600/30 flex items-center justify-center gap-2 hover:-translate-y-1">
+                            Destravar Meu Projeto
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#como-funciona" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2">
+                            Entender o Processo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Elemento Gráfico (Simulação de Match Multidisciplinar) -->
+                <div class="relative hidden lg:block">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-slate-100 to-white rounded-[3rem] shadow-2xl transform rotate-3 scale-105 border border-slate-100"></div>
+                    <div class="relative bg-white rounded-[3rem] p-8 shadow-xl border border-slate-100">
+                        <div class="flex justify-between items-start mb-12 relative">
+                            
+                            <!-- Perfil 1 (Bióloga) -->
+                            <div class="space-y-3 z-10">
+                                <div class="w-12 h-12 bg-rose-100 rounded-2xl flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-brand-rose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800">Dra. Amanda</h3>
+                                    <p class="text-xs text-slate-500">Bióloga / Pesquisadora</p>
+                                </div>
+                                <div class="bg-slate-100 px-3 py-1 rounded-lg text-xs font-medium text-slate-600 w-fit">Precisa registrar Patente</div>
+                            </div>
+                            
+                            <!-- Animação Central -->
+                            <div class="absolute left-1/2 top-4 transform -translate-x-1/2 w-24 h-24 border-2 border-dashed border-slate-200 rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite]">
+                                <div class="w-16 h-16 bg-gradient-to-r from-brand-purple to-brand-rose rounded-full opacity-20 blur-md"></div>
+                            </div>
+
+                            <!-- Perfil 2 (Advogado) -->
+                            <div class="space-y-3 text-right z-10">
+                                <div class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center ml-auto">
+                                    <svg class="w-6 h-6 text-brand-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800">Carlos</h3>
+                                    <p class="text-xs text-slate-500">Advogado (Especialista PI)</p>
+                                </div>
+                                <div class="bg-slate-100 px-3 py-1 rounded-lg text-xs font-medium text-slate-600 w-fit ml-auto">Consultoria Jurídica</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Barra de Match -->
+                        <div class="bg-slate-900 rounded-2xl p-6 text-center mt-8">
+                            <p class="text-brand-light font-mono text-sm mb-2 font-semibold">Match Encontrado: Colaboração Ativa</p>
+                            <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-brand-purple to-brand-rose w-full rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-brand text-3xl font-bold text-slate-900 mb-4">Como o Synergy funciona?</h2>
+                <p class="text-lg text-slate-600">Cruzamos as fronteiras acadêmicas para que você possa focar apenas no que faz de melhor.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Passo 1 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-14 h-14 bg-purple-100 text-brand-purple rounded-2xl flex items-center justify-center text-xl font-bold mb-6">1</div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-3">Cadastre o seu perfil</h3>
+                    <p class="text-slate-600 leading-relaxed">Diga-nos qual é a barreira atual do seu projeto ou qual competência acadêmica/técnica você tem a oferecer.</p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-14 h-14 bg-rose-100 text-brand-rose rounded-2xl flex items-center justify-center text-xl font-bold mb-6">2</div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-3">Nós fazemos o Match</h3>
+                    <p class="text-slate-600 leading-relaxed">O nosso sistema cruza a taxonomia da sua demanda com os especialistas cadastrados no nosso ecossistema.</p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-14 h-14 bg-slate-200 text-brand-teal rounded-2xl flex items-center justify-center text-xl font-bold mb-6">3</div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-3">Colabore e Avance</h3>
+                    <p class="text-slate-600 leading-relaxed">Conectamos as duas partes. Vocês alinham expectativas (coautoria, consultoria, etc.) e destravam a pesquisa juntos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARA QUEM -->
+    <section id="para-quem" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Box 1: Demandantes -->
+                <div class="bg-white rounded-[2.5rem] p-10 lg:p-12 border border-slate-200 shadow-sm">
+                    <div class="w-16 h-16 bg-purple-100 text-brand-purple rounded-2xl flex items-center justify-center mb-8">
+                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                    <h2 class="font-brand text-3xl font-bold text-slate-900 mb-4">Para quem tem o projeto</h2>
+                    <p class="text-lg text-slate-600 mb-8">Mestrandos, doutorandos ou grupos de pesquisa que precisam de habilidades específicas para finalizar seus artigos.</p>
+                    
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-purple shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <span class="text-slate-700">Tradução e revisão para submissão em revistas internacionais.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-purple shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <span class="text-slate-700">Apoio jurídico para registro de patentes ou Comitês de Ética.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-purple shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <span class="text-slate-700">Qualquer barreira metodológica fora da sua área de formação.</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://tally.so/r/ZjO75e" target="_blank" class="inline-flex items-center gap-2 text-brand-purple font-bold hover:text-purple-800">
+                        Submeter Demanda 
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Box 2: Ofertantes -->
+                <div class="bg-slate-900 rounded-[2.5rem] p-10 lg:p-12 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-rose rounded-full blur-[100px] opacity-20"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-slate-800 text-brand-light rounded-2xl flex items-center justify-center mb-8 border border-slate-700">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h2 class="font-brand text-3xl font-bold text-white mb-4">Para quem tem a técnica</h2>
+                        <p class="text-lg text-slate-300 mb-8">Especialistas, tradutores, advogados, analistas e profissionais que buscam aplicar seus conhecimentos na ciência.</p>
+                        
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-brand-rose shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span class="text-slate-300">Trabalhe em projetos científicos reais e de alto impacto.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-brand-rose shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span class="text-slate-300">Transforme sua habilidade em coautorias e renome acadêmico.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-brand-rose shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span class="text-slate-300">Amplie o seu networking com líderes de laboratórios e Universidades.</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://tally.so/r/ZjO75e" target="_blank" class="inline-flex items-center gap-2 text-brand-rose font-bold hover:text-rose-400">
+                            Oferecer Habilidades 
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-24 relative overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900 to-slate-800"></div>
+        <!-- Círculos decorativos -->
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-purple rounded-full blur-[150px] opacity-20 transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="font-brand text-4xl md:text-5xl font-bold text-white mb-6">A peça que falta para a sua pesquisa.</h2>
+            <p class="text-xl text-slate-300 mb-10 font-light">De revisores de texto a estatísticos, de advogados a engenheiros: junte-se ao hub que conecta ideias brilhantes aos talentos certos.</p>
+            
+            <a href="https://tally.so/r/ZjO75e" target="_blank" class="inline-flex items-center justify-center gap-3 bg-white text-slate-900 hover:bg-slate-50 px-10 py-5 rounded-full font-bold text-xl transition-all shadow-2xl hover:scale-105">
+                Acessar o Formulário Agora
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <!-- Logo no Footer -->
+                        <svg class="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g transform="translate(50, 50)">
+                                <circle cx="-14" cy="0" r="21" fill="#3b4b61" opacity="0.85" style="mix-blend-mode: screen;"/>
+                                <circle cx="0" cy="-14" r="21" fill="#b94a62" opacity="0.85" style="mix-blend-mode: screen;"/>
+                                <circle cx="14" cy="0" r="21" fill="#dbeafe" opacity="0.9"/>
+                                <circle cx="0" cy="14" r="21" fill="#8858e3" opacity="0.85" style="mix-blend-mode: screen;"/>
+                                <rect x="-9" y="-9" width="18" height="18" fill="#020617" transform="rotate(45)" />
+                            </g>
+                        </svg>
+                        <span class="font-brand font-bold text-lg text-white">Synergy</span>
+                    </div>
+                    <p class="text-sm">Cruzando fronteiras acadêmicas para fazer a sua ciência avançar. A ponte definitiva entre a teoria e a execução.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#como-funciona" class="hover:text-white transition-colors">Como Funciona</a></li>
+                        <li><a href="#para-quem" class="hover:text-white transition-colors">Para Quem</a></li>
+                        <li><a href="https://tally.so/r/ZjO75e" target="_blank" class="hover:text-white transition-colors">Cadastro no Hub</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Belo Horizonte, MG - Brasil</li>
+                        <li><a href="mailto:contato@synergyresearch.com" class="hover:text-white transition-colors">contato@synergyresearch.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>&copy; 2026 Synergy Research Hub. Todos os direitos reservados.</p>
+                <div class="flex gap-4">
+                    <span class="hover:text-white transition-colors cursor-pointer">Termos de Uso</span>
+                    <span class="hover:text-white transition-colors cursor-pointer">Privacidade (LGPD)</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Simples para o Menu Mobile -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
